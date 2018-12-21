@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=dynamic window manager
+Exec=/home/seb22/Downloads/SRC/dwm/scripts/startdwm
+Type=XSession
