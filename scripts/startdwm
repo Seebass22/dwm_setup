@@ -5,7 +5,7 @@ done &
 
 while true; do
 	# Log stderror to a file
-	/home/seb22/.local/bin/dwm_autostart
+	/home/seb22/Downloads/SRC/dwm/scripts/dwm_autostart
 	dwm 2> ~/.dwm.log
 	# No error logging
 	#dwm >/dev/null 2>&1
