@@ -1,5 +1,6 @@
-while xsetroot -name "$(iwgetid | cut -d ':' -f2)   Volume: $(amixer | grep '%' | head -n 1 | awk '{print $5 $6}' | sed -e 's/\[//g' -e 's/\]//g' -e 's/off/ muted/' -e 's/on//')   Brightness: $(light)%   Battery: $(cat /sys/class/power_supply/BAT1/capacity)%$(cat /sys/class/power_supply/BAT1/status | sed -e 's/Discharging//' -e 's/Charging/ (Charging)/')   CPU: $(($(cat /sys/class/thermal/thermal_zone0/temp) / 1000 ))°C   $(date +'%b %d, %H:%M')"
+while true
 do
+	sh ~/Downloads/SRC/dwm/scripts/xsetroot.sh
 	sleep 1
 done &
 
