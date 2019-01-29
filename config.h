@@ -60,12 +60,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[]  = { "rofi", "-modi", "drun", "-show", "drun", NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *bookcmd[]  = { "/home/seb22/bashscripts/books.sh", NULL };
+static const char *symcmd[]  = { "/home/seb22/bashscripts/dmenu_symbols.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	//{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = bookcmd } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = symcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
